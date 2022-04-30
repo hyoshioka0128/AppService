@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://azure.github.io/AppService/feed.xml" rel="self" type="application/atom+xml" /><link href="https://azure.github.io/AppService/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2022-04-30T00:11:27+00:00</updated><id>https://azure.github.io/AppService/feed.xml</id><title type="html">Azure App Service</title><subtitle>Announcements, updates, and release notes from the Azure App Service product team.</subtitle><author><name>Azure App Service</name></author><entry><title type="html">Generally available: Enhanced network security features for App Service Basic SKU</title><link href="https://azure.github.io/AppService/2022/04/14/Enhanced-security-for-basic-sku.html" rel="alternate" type="text/html" title="Generally available: Enhanced network security features for App Service Basic SKU" /><published>2022-04-14T00:00:00+00:00</published><updated>2022-04-14T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/04/14/Enhanced-security-for-basic-sku</id><content type="html" xml:base="https://azure.github.io/AppService/2022/04/14/Enhanced-security-for-basic-sku.html">&lt;p&gt;App Service now supports &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/overview-vnet-integration&quot;&gt;VNet integration&lt;/a&gt; (outbound) and &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/networking/private-endpoint&quot;&gt;private endpoints&lt;/a&gt; (inbound) all the way down to the &lt;a href=&quot;https://azure.microsoft.com/pricing/details/app-service/linux/&quot;&gt;Basic SKU&lt;/a&gt;. The App Service VNet integration feature enables your apps to access resources in or through a virtual network but doesn’t grant inbound private access to your apps. For inbound access, you need private endpoints, which allow clients located in your private network to securely access your apps over Private Link, which eliminates exposure from the public internet.&lt;/p&gt;
+
+&lt;p&gt;With this update, you can use our lower-cost tiers and achieve the same level of security that you could previously only achieve with our high-end SKUs. Note that if you want to downgrade an existing App Service Plan and still use VNet integration, you need to be on the newer App Service footprint to ensure you’re App Service Plan supports VNet integration for Basic SKU. For more details, see the VNet integration &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/overview-vnet-integration#limitations&quot;&gt;limitations&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Learn how to enable &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/configure-vnet-integration-enable&quot;&gt;virtual network integration&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Learn how to &lt;a href=&quot;https://docs.microsoft.com/azure/private-link/tutorial-private-endpoint-webapp-portal&quot;&gt;connect to a web app using an Azure Private endpoint&lt;/a&gt;.&lt;/p&gt;</content><author><name>Azure App Service</name></author><category term="networking" /><summary type="html">App Service now supports VNet integration (outbound) and private endpoints (inbound) all the way down to the Basic SKU. The App Service VNet integration feature enables your apps to access resources in or through a virtual network but doesn’t grant inbound private access to your apps. For inbound access, you need private endpoints, which allow clients located in your private network to securely access your apps over Private Link, which eliminates exposure from the public internet.</summary></entry><entry><title type="html">Public preview: Networking configuration options during Web App creation in the Azure Portal</title><link href="https://azure.github.io/AppService/2022/04/14/networking-tab-web-app-service-create-preview.html" rel="alternate" type="text/html" title="Public preview: Networking configuration options during Web App creation in the Azure Portal" /><published>2022-04-14T00:00:00+00:00</published><updated>2022-04-14T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/04/14/networking-tab-web-app-service-create-preview</id><content type="html" xml:base="https://azure.github.io/AppService/2022/04/14/networking-tab-web-app-service-create-preview.html">&lt;p&gt;We are happy to announce that you can now enable &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/overview-vnet-integration&quot;&gt;Virtual Network integration&lt;/a&gt; as well as &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/networking/private-endpoint&quot;&gt;private endpoints&lt;/a&gt; for inbound access when creating Web Apps using the Azure Portal. Previously, you had to use the Azure CLI/PowerShell or ARM to configure these features when creating your apps.&lt;/p&gt;
+
+&lt;p&gt;Web Apps can be provisioned with an inbound address that is public to the internet or isolated to an Azure virtual network. Web Apps can also be provisioned with outbound traffic that is able to reach endpoints in a virtual network, be governed by network security groups, or be restricted by virtual network routes. Use the new Networking tab to configure these features when creating your apps so you can ensure a secure configuration from the start!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/AppService/media/2022/04/web-app-networking-tab.png&quot; alt=&quot;Web App creation Networking tab sample&quot; /&gt;&lt;/p&gt;</content><author><name>Azure App Service</name></author><category term="networking" /><summary type="html">We are happy to announce that you can now enable Virtual Network integration as well as private endpoints for inbound access when creating Web Apps using the Azure Portal. Previously, you had to use the Azure CLI/PowerShell or ARM to configure these features when creating your apps.</summary></entry><entry><title type="html">Public Preview: Codeless Monitoring for Windows Containers</title><link href="https://azure.github.io/AppService/2022/04/11/windows-containers-app-insights-preview.html" rel="alternate" type="text/html" title="Public Preview: Codeless Monitoring for Windows Containers" /><published>2022-04-11T00:00:00+00:00</published><updated>2022-04-11T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/04/11/windows-containers-app-insights-preview</id><content type="html" xml:base="https://azure.github.io/AppService/2022/04/11/windows-containers-app-insights-preview.html">&lt;p&gt;We are happy to share that &lt;a href=&quot;https://docs.microsoft.com/azure/azure-monitor/app/codeless-overview&quot;&gt;Auto-Instrumentation&lt;/a&gt; of Application Insights for Windows Container applications is now in public preview! Auto-Instrumentation allows you to monitor your applications with Application Insights &lt;strong&gt;without changing your code&lt;/strong&gt;. When enabled, the App Service platform will configure and attach the agent to the application in your container. Once attached, metrics such as requests, dependencies, latency, and stack traces will flow into your Application Insights resource where you can analyze the data and set up alerts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Auto-Instrumentation for Windows Containers on App Service currently supports .NET and Java applications. Node.js support is planned. For other stacks, consider adding the Application Insights SDK to your application.&lt;/p&gt;
+
+&lt;h2 id=&quot;enable-auto-instrumentation&quot;&gt;Enable Auto-Instrumentation&lt;/h2&gt;
+
+&lt;p&gt;You can enable Auto-Instrumentation from the &lt;strong&gt;Create&lt;/strong&gt; blade, or from the &lt;strong&gt;Application Insights&lt;/strong&gt; blade.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-blade&quot;&gt;Create Blade&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to the &lt;a href=&quot;https://portal.azure.com/#create/Microsoft.WebSite&quot;&gt;Create Web App blade&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Provide a name for your web app, and select &lt;strong&gt;Docker Container&lt;/strong&gt; as the Publish type, and &lt;strong&gt;Windows&lt;/strong&gt; as the Operating System&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to the &lt;strong&gt;Monitoring&lt;/strong&gt; tab, and select &lt;strong&gt;Yes&lt;/strong&gt; to enable Application Insights&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/AppService/media/2022/04/windows-containers-create.png&quot; alt=&quot;Enabling App Insights&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Go to &lt;strong&gt;Review + Create&lt;/strong&gt; and click &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s it! Once your container is deployed, Application Insights will attach automatically and begin sending metrics.&lt;/p&gt;
+
+&lt;h3 id=&quot;application-insights-blade&quot;&gt;Application Insights Blade&lt;/h3&gt;
+
+&lt;p&gt;If you already have a Windows Container web app, open it in the Azure Portal and go to the &lt;strong&gt;Application Insights (preview)&lt;/strong&gt; menu item.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select &lt;strong&gt;Turn on Application Insights&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select a &lt;strong&gt;Location&lt;/strong&gt; for your Application Insights resource to be created. (It’s suggested to create the resource in the same region as the Web App.)&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/AppService/media/2022/04/windows-containers-ai-blade.png&quot; alt=&quot;Enabling App Insights&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(Optional) use the language tabs at the bottom for &lt;strong&gt;.NET&lt;/strong&gt;, &lt;strong&gt;.NET Core&lt;/strong&gt;, and &lt;strong&gt;Java&lt;/strong&gt; to configure the agent&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Apply&lt;/strong&gt; to save your changes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And you’re done! Your web app will restart and Application Insights will attach automatically to begin sending metrics.&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure/app-service/quickstart-custom-container?tabs=dotnet&amp;amp;pivots=container-windows&quot;&gt;Quickstart: Windows Containers on App Service&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview&quot;&gt;Overview of Application Insights&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Azure App Service</name></author><category term="windows containers" /><summary type="html">We are happy to share that Auto-Instrumentation of Application Insights for Windows Container applications is now in public preview! Auto-Instrumentation allows you to monitor your applications with Application Insights without changing your code. When enabled, the App Service platform will configure and attach the agent to the application in your container. Once attached, metrics such as requests, dependencies, latency, and stack traces will flow into your Application Insights resource where you can analyze the data and set up alerts.</summary></entry><entry><title type="html">Auto-Healing and Crash Monitoring integration with Azure Monitor</title><link href="https://azure.github.io/AppService/2022/04/05/Announcing-Azure-Monitor-Integration-with-Crash-Monitoring-copy.html" rel="alternate" type="text/html" title="Auto-Healing and Crash Monitoring integration with Azure Monitor" /><published>2022-04-05T00:00:00+00:00</published><updated>2022-04-05T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/04/05/Announcing-Azure-Monitor-Integration-with-Crash-Monitoring%20copy</id><content type="html" xml:base="https://azure.github.io/AppService/2022/04/05/Announcing-Azure-Monitor-Integration-with-Crash-Monitoring-copy.html">&lt;p&gt;&lt;a href=&quot;https://azure.github.io/AppService/2018/09/10/Announcing-the-New-Auto-Healing-Experience-in-App-Service-Diagnostics.html&quot;&gt;Auto-healing&lt;/a&gt; is a heavily used diagnostic feature of Azure App Service that allows end-users to configure a rich set of triggers that can be used to mitigate an app once it starts misbehaving. It not only allows you to mitigate the app from a bad situation but it also allows customers to capture diagnostic data that helps them debug the issues later.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://azure.github.io/AppService/2020/08/11/Crash-Monitoring-Feature-in-Azure-App-Service.html&quot;&gt;Crash Monitoring&lt;/a&gt; and &lt;a href=&quot;https://azure.github.io/AppService/2021/03/01/Proactive-Crash-Monitoring-in-Azure-App-Service.html&quot;&gt;Proactive Crash Monitoring&lt;/a&gt; allow end-users to effectively diagnose and debug application crashes (process exits due to unhandled exceptions) easily.&lt;/p&gt;
+
+&lt;p&gt;One of the most asked features for both these features was the ability to view historical information about when these tools were triggered and what conditions cause them to trigger. Customers have also asked us to be able to view this information for a longer duration as by default the views available in &lt;em&gt;Diagnose and Solve&lt;/em&gt; blade show you a maximum of 24 hours of information.&lt;/p&gt;
+
+&lt;h3 id=&quot;announcing-auto-healing-and-crash-monitoring-integration-with-azure-monitor&quot;&gt;Announcing Auto-healing and Crash Monitoring integration with Azure Monitor&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;We are happy to announce the integration of App Services Auto-Healing and Crash Monitoring feature with Azure Monitor&lt;/em&gt;. With this integration, you can identify when an app was recycled, the number of times it was recycled and due to what condition. You can also identify application code that leads to a crash for your app. Azure Monitor integration allows you to configure alerts and actions to be taken when any of these events are triggered. You can choose for how long you want this data to be retained and use &lt;strong&gt;Log Analytics&lt;/strong&gt; to query this data and setup alerts as per your requirement.&lt;/p&gt;
+
+&lt;h3 id=&quot;integrating-auto-healing-and-crash-monitoring-with-azure-monitor&quot;&gt;Integrating Auto-Healing and Crash Monitoring with Azure Monitor&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;To integrate Azure Monitor with these diagnostic tools, navigate to &lt;strong&gt;Diagnostic Settings&lt;/strong&gt; for your App in the Azure Portal and click on &lt;strong&gt;Add Diagnostic Setting&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Give a descriptive setting name and make sure &lt;strong&gt;AppServicePlatformLogs&lt;/strong&gt; category is selected&lt;/li&gt;
+  &lt;li&gt;Choose the destination per your choice. In the below example, I choosing to send the data to a Log Analytics workspace and I chose an existing Log Analytics workspace in my subscription.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/AppService/media/2022/04/AppServicePlatformLogs-AzureMonitor.png&quot; alt=&quot;Enabling AppService Platform logs in Azure Monitor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And that’s it !!!&lt;/p&gt;
+
+&lt;h3 id=&quot;viewing-auto-healing-events-in-log-analytics&quot;&gt;Viewing Auto-Healing events in Log Analytics&lt;/h3&gt;
+
+&lt;p&gt;Whenever Auto-Healing takes action based on the configured triggers, the events can be viewed in &lt;strong&gt;AppServicePlatformLogs&lt;/strong&gt; table in log analytics workspace. To view the data, just click on &lt;strong&gt;Logs&lt;/strong&gt; for your App and run a query like below&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AppServicePlatformLogs
+| where TimeGenerated &amp;gt; ago(1d)
+| where OperationName startswith &quot;AutoHealing&quot;
+| project TimeGenerated, OperationName, Level, Message, _ResourceId
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/AppService/media/2022/04/AutoHealingEventsQuery-AzureMonitor.png&quot; alt=&quot;AutoHealing Events in Azure Monitor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/AppService/media/2022/04/AutoHealingRecords-AzureMonitor.png&quot; alt=&quot;AutoHealing Event Records in Azure Monitor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;Message&lt;/strong&gt; column helps identifying the action invoked and the trigger. For e.g. in the above event, we see this&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Worker Process successfully launched &lt;strong&gt;custom action ‘D:\home\data\DaaS\bin\DaasConsole.exe’&lt;/strong&gt; due to &lt;strong&gt;‘Total Requests’&lt;/strong&gt; limit&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The &lt;strong&gt;OperationName&lt;/strong&gt; column will have one of the three values based on the action chosen in the Auto-Healing configuration.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AutoHealingCustomAction&lt;/li&gt;
+  &lt;li&gt;AutoHealingRecycle&lt;/li&gt;
+  &lt;li&gt;AutoHealingLogEvent&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;viewing-crash-monitoring-events-in-log-analytics&quot;&gt;Viewing Crash Monitoring events in Log Analytics&lt;/h3&gt;
+
+&lt;p&gt;Whenever crash monitoring or proactive crash monitoring captures a memory dump or records a call-stack of the crashing thread, records will be generated in the &lt;strong&gt;AppServicePlatformLogs&lt;/strong&gt; table in Log Analytics workspace. Information about the dump file and the time the dump file is copied to storage will also be logged. To view the data, just click on &lt;strong&gt;Logs&lt;/strong&gt; for your App and use a query like below&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AppServicePlatformLogs
+| where TimeGenerated &amp;gt; ago(1d)
+| where OperationName =~ 'CrashMonitoring' or OperationName =~ 'ProactiveCrashMonitoring'
+| project TimeGenerated, OperationName, ActivityId, Level, Message, Exception, StackTrace, _ResourceId
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You may have to choose the &lt;strong&gt;ActivityId&lt;/strong&gt;, &lt;strong&gt;Exception&lt;/strong&gt; and &lt;strong&gt;StackTrace&lt;/strong&gt; columns from the &lt;strong&gt;Columns&lt;/strong&gt; side panel to see all the above information&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/AppService/media/2022/04/ProactiveCrashMonitoringEvents-AzureMonitor.png&quot; alt=&quot;Crash Monitoring Events in Azure Monitor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/AppService/media/2022/04/ProactiveCrashMonitoringResults-AzureMonitor.png&quot; alt=&quot;Crash Monitoring Event Results in Azure Monitor&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;configuring-alerts-on-these-events&quot;&gt;Configuring alerts on these Events&lt;/h3&gt;
+
+&lt;p&gt;To configure an alert, write the Log Analytics query as per your requirement and choose &lt;strong&gt;New Alert Rule&lt;/strong&gt; from the ribbon and follow the rest of the configuration. For more information, refer to &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-log&quot;&gt;Create, view, and manage log alerts using Azure Monitor&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We hope this helps in identifying auto-healing and crash monitoring invocations easily and set up alerts around these events which will help you effectively diagnose and troubleshoot your apps hosted on App Service.&lt;/p&gt;
+
+&lt;p&gt;Happy Debugging!&lt;/p&gt;
+
+&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.github.io/AppService/2019/11/01/App-Service-Integration-with-Azure-Monitor.html&quot;&gt;App Service Integration with Azure Monitor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.github.io/AppService/2020/08/11/Crash-Monitoring-Feature-in-Azure-App-Service.html&quot;&gt;Crash Monitoring in Azure App Service&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.github.io/AppService/2021/03/01/Proactive-Crash-Monitoring-in-Azure-App-Service.html&quot;&gt;Proactive Crash Monitoring in Azure App Service&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.github.io/AppService/2018/09/10/Announcing-the-New-Auto-Healing-Experience-in-App-Service-Diagnostics.html&quot;&gt;Announcing the New Auto Healing Experience in App Service Diagnostics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-log&quot;&gt;Create, view, and manage log alerts using Azure Monitor&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Azure App Service</name></author><category term="[&quot;diagnostics&quot;]" /><summary type="html">Auto-healing is a heavily used diagnostic feature of Azure App Service that allows end-users to configure a rich set of triggers that can be used to mitigate an app once it starts misbehaving. It not only allows you to mitigate the app from a bad situation but it also allows customers to capture diagnostic data that helps them debug the issues later.</summary></entry><entry><title type="html">App Service Web Apps, Functions, and Logic Apps (Standard) *.azurewebsites.net TLS certificate changes and what you need to know</title><link href="https://azure.github.io/AppService/2022/03/22/Default-Cert-Renew.html" rel="alternate" type="text/html" title="App Service Web Apps, Functions, and Logic Apps (Standard) *.azurewebsites.net TLS certificate changes and what you need to know" /><published>2022-03-22T00:00:00+00:00</published><updated>2022-03-22T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/03/22/Default-Cert-Renew</id><content type="html" xml:base="https://azure.github.io/AppService/2022/03/22/Default-Cert-Renew.html">&lt;p&gt;&lt;strong&gt;This blog contains information about *.azurewebsites.net TLS certificate changes for web apps, functions, and logic apps (standard). Customers should not be impacted by this change.&lt;/strong&gt; The scope of services affected includes web apps, functions, and logic apps (standard); logic apps (consumption) are not impacted. This change is limited to public Azure cloud; government clouds are not affected.&lt;/p&gt;
+
+&lt;p&gt;Every web app, function, or logic app (standard) has its own default hostname that goes by &lt;em&gt;“&amp;lt;resource-name&amp;gt;.azurewebsites.net”&lt;/em&gt; where App Service secures it with a wildcard &lt;em&gt;*.azurewebsites.net&lt;/em&gt; TLS certificate. The current TLS certificate issued by Baltimore CyberTrust Root CA is set to expire on July 7th, 2022. Starting April 2022, App Service will begin renewing these TLS certificates and instead use certificates issued by DigiCert Global Root G2 CA. Due to the distributed asynchronous nature of the renewal process, there isn’t an exact date when the certificate will be rotated and visible to individual web apps, functions, and logic apps (standard).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We expect that this change will be a non-event and will not impact customers. However, you may be impacted if an application has incorrectly taken a hard dependency on the *.azurewebsites.net TLS certificate, for example by way of “certificate pinning”.&lt;/strong&gt; Certificate pinning is a practice where an application only allows a specific list of acceptable Certificate Authorities (CAs), public keys, thumbprints, etc. &lt;strong&gt;Applications should never pin to the *.azurewebsites.net TLS certificate.&lt;/strong&gt; Applications requiring certificate stability should use custom domains in conjunction with custom TLS certificates for those domains. You can refer to the &lt;a href=&quot;#recommended-best-practices&quot;&gt;recommended best practices&lt;/a&gt; section of this article for more information.&lt;/p&gt;
+
+&lt;h2 id=&quot;recommended-best-practices-&quot;&gt;Recommended best practices &lt;a name=&quot;recommended-best-practices&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Certificate pinning of *.azurewebsites.net TLS certificates is not recommended because the *.azurewebsites.net TLS certificate could be rotated anytime given the nature of App Service as a Platform as a Service (PaaS). In the event that the service rotates the App Service default wildcard TLS certificate, certificate pinned applications will break and disrupt the connectivity for applications that are hardcoded to a specific set of certificate attributes. The periodicity with which the *.azurewebsites.net TLS certificate is rotated is also not guaranteed since the rotation frequency can change at any time.&lt;/p&gt;
+
+&lt;p&gt;If an application needs to rely on certificate pinning behavior, it is recommended to add a custom domain to a web app, function, or logic app (standard) and provide a custom TLS certificate for the domain which can then be relied on for certificate pinning.&lt;/p&gt;
+
+&lt;p&gt;Note that applications which rely on certificate pinning should also not have a hard dependency on an App Service Managed Certificate. App Service Managed Certificates could be rotated anytime, leading to similar problems for applications that rely on stable certificate properties. It is best practice to provide a custom TLS certificate for applications that rely on certificate pinning.&lt;/p&gt;</content><author><name>Azure App Service</name></author><category term="certsdomains" /><summary type="html">This blog contains information about *.azurewebsites.net TLS certificate changes for web apps, functions, and logic apps (standard). Customers should not be impacted by this change. The scope of services affected includes web apps, functions, and logic apps (standard); logic apps (consumption) are not impacted. This change is limited to public Azure cloud; government clouds are not affected.</summary></entry><entry><title type="html">Migrating your Windows container apps from the Premium Container SKU (Preview) to Premium V3 SKU</title><link href="https://azure.github.io/AppService/2022/03/02/Migrating-your-Windows-conainer-apps-from-Premium-Container-SKU-(Preview)-to-Premium-V3-SKU.html" rel="alternate" type="text/html" title="Migrating your Windows container apps from the Premium Container SKU (Preview) to Premium V3 SKU" /><published>2022-03-02T00:00:00+00:00</published><updated>2022-03-02T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/03/02/Migrating-your-Windows-conainer-apps-from-Premium-Container-SKU-(Preview)-to-Premium-V3-SKU</id><content type="html" xml:base="https://azure.github.io/AppService/2022/03/02/Migrating-your-Windows-conainer-apps-from-Premium-Container-SKU-(Preview)-to-Premium-V3-SKU.html">&lt;p&gt;The Premium Container SKU will &lt;strong&gt;not&lt;/strong&gt; be moving out of preview status and will be retired on &lt;strong&gt;30th June 2022&lt;/strong&gt;.  Please move your applications to the &lt;strong&gt;Premium V3 SKU&lt;/strong&gt; ahead of this date if you want to continue running your Windows container workloads.   The Premium V3 SKU is SLA-backed and supports Windows containers.  In addition to general availabilty of support for Windows containers, Premium V3 provides enhanced performance for production applications, virtual network connectivity and new pricing options including Dev / Test, Pay-as-you-Go, 1-year and 3-year reserved instance pricing.  See additional details &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/app-service-configure-premium-tier&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have an application that is using the Premium Container SKU (Preview) and you would like to move to the new Premium V3 SKU, you will need to copy and re-deploy your application to a Premium V3 App Service Plan. The following is an example on how to do this using the clone functionality via Azure CLI in PowerShell.&lt;/p&gt;
+
+&lt;h2 id=&quot;tutorial&quot;&gt;Tutorial&lt;/h2&gt;
+
+&lt;h3 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h3&gt;
+
+&lt;p&gt;This tutorial uses &lt;code class=&quot;highlighter-rouge&quot;&gt;Az.Accounts&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Az.Websites&lt;/code&gt; PowerShell modules. Follow the instructions &lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-7.2.0#installation&quot;&gt;here&lt;/a&gt; before starting to install the modules.&lt;/p&gt;
+
+&lt;p&gt;You will need your:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Subscription ID: “&amp;lt; subscription-id &amp;gt;”&lt;/li&gt;
+  &lt;li&gt;Resource Group: “my-pc-resource-group”&lt;/li&gt;
+  &lt;li&gt;Web App Name: “my-pc-web-app”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;prepare-your-environment&quot;&gt;Prepare your environment&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;To get started you will first need to connect your Azure account&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Connect-AzAccount
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Then, set your subscription in PowerShell to the context of your Web App&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Set-AzContext &lt;span class=&quot;nt&quot;&gt;-Subscription&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;subscription_id&amp;gt;&quot;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;copy-your-premium-container-site&quot;&gt;Copy your Premium Container site&lt;/h3&gt;
+
+&lt;p&gt;Next, copy the Premium Container site information into a PowerShell variable. You will use this variable when you clone the app&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$myPCApp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Get-AzWebApp &lt;span class=&quot;nt&quot;&gt;-ResourceGroupName&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my-pc-resource-group&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--Name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my-pc-web-app&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;create-your-premium-v3-app-service-plan&quot;&gt;Create your Premium V3 App Service Plan&lt;/h3&gt;
+
+&lt;p&gt;Create the new App Service Plan that your site will be cloned to. Be sure to use the ‘’–hyper-v’’ parameter so it will support your Windows container workload. Here you will also define your new resource group and app name.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;az appservice plan create &lt;span class=&quot;nt&quot;&gt;--resource-group&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my-pv3-resource-group&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my-pv3-app-service-plan&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--hyper-v&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;East US&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--sku&lt;/span&gt; p1v3 &lt;span class=&quot;nt&quot;&gt;--subscription&lt;/span&gt; 
+&amp;lt;subscription-id&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;clone-your-premium-container-application-to-the-new-premium-v3-app-service-plan&quot;&gt;Clone your Premium Container application to the new Premium V3 App Service Plan&lt;/h3&gt;
+
+&lt;p&gt;Use the following PowerShell command to clone your existing Premium Container app to your Hyper-V enabled Premium V3 App Service Plan. Here you will use the $myPCApp variable defined earlier as your -SourceWebApp value.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;New-AzWebApp &lt;span class=&quot;nt&quot;&gt;-ResourceGroupName&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my-pv3-resource-group&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my-pv3-app&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Location&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;East US&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-AppServicePlan&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;my-pv3-app-service-plan&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-SourceWebApp&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$myPCApp&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After running this command you should now have your cloned Premium Container application in a new Premium V3 App Service Plan.&lt;/p&gt;
+
+&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure/app-service/app-service-configure-premium-tier&quot;&gt;Configure Premium V3 tier for Azure App Service&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrate-modernize-net-applications-with-azure/ba-p/1696499&quot;&gt;Migrate .NET apps to Azure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-app-service-fall-ignite-2021-edition/ba-p/2901581&quot;&gt;Windows Containers on ASEv3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/updates/app-service-announces-general-availability-of-windows-container-support/&quot;&gt;Windows Containers GA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Azure App Service</name></author><category term="windows containers" /><summary type="html">The Premium Container SKU will not be moving out of preview status and will be retired on 30th June 2022. Please move your applications to the Premium V3 SKU ahead of this date if you want to continue running your Windows container workloads. The Premium V3 SKU is SLA-backed and supports Windows containers. In addition to general availabilty of support for Windows containers, Premium V3 provides enhanced performance for production applications, virtual network connectivity and new pricing options including Dev / Test, Pay-as-you-Go, 1-year and 3-year reserved instance pricing. See additional details here.</summary></entry><entry><title type="html">WordPress on App Service Public Preview</title><link href="https://azure.github.io/AppService/2022/02/23/WordPress-on-App-Service-Public-Preview.html" rel="alternate" type="text/html" title="WordPress on App Service Public Preview" /><published>2022-02-23T00:00:00+00:00</published><updated>2022-02-23T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/02/23/WordPress%20on%20App%20Service%20Public%20Preview</id><content type="html" xml:base="https://azure.github.io/AppService/2022/02/23/WordPress-on-App-Service-Public-Preview.html">&lt;p&gt;We are happy to announce the public preview of the &lt;a href=&quot;https://ms.portal.azure.com/#create/WordPress.WordPress&quot;&gt;WordPress offering on App Service&lt;/a&gt;. This offering will enable you to deploy and host new WordPress websites with ease.&lt;/p&gt;
+
+&lt;p&gt;Check out the following docs to learn more about deploying a WordPress website on AppService: &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/app-service/quickstart-wordpress&quot;&gt;Quickstart: Create a WordPress site - Azure App Service&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For more details refer to &lt;a href=&quot;https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-new-and-better-wordpress-on-app-service/ba-p/3202594&quot;&gt;our blog post on MS Techcommunity&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;known-limitations&quot;&gt;Known limitations&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;In the preview period, WP installation may take up to 10 minutes. We’re working to improve the deployment time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wordpress-linux-hosting-plans&quot;&gt;WordPress Linux Hosting Plans&lt;/h2&gt;
+&lt;p&gt;The latest update provides you with four hosting plans. Hosting plans and SKUs are detailed below:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Hosting plan&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Web app&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Database (MySQL Flexible Server)&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Basic&lt;/td&gt;
+      &lt;td&gt;B1&lt;/td&gt;
+      &lt;td&gt;Burstable, B1s&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Development&lt;/td&gt;
+      &lt;td&gt;S1&lt;/td&gt;
+      &lt;td&gt;Burstable, B1ms&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Standard&lt;/td&gt;
+      &lt;td&gt;P1V2&lt;/td&gt;
+      &lt;td&gt;Burstable, B2s&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Premium&lt;/td&gt;
+      &lt;td&gt;P1V3&lt;/td&gt;
+      &lt;td&gt;Gen Purpose, D2ds_v4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
+&lt;p&gt;The new experience ships with two pre-installed plugins, W3TC and WP Smush. 
+W3TC plugin pre-installed. It uses Redis cache to process requests faster. WordPress pages, objects, and DB objects are cached to improve performance.
+WP Smush will compress images while retaining optimal quality. This will improve load times and increase WordPress performance.&lt;/p&gt;
+
+&lt;h2 id=&quot;changing-mysql-database-password&quot;&gt;Changing MySQL Database Password&lt;/h2&gt;
+&lt;p&gt;WordPress deployment creates an AppService and a MySQL database server, under the same resource group. Login credentials for the MySQL server are generated randomly during deployment process.&lt;/p&gt;
+
+&lt;p&gt;Database connection details are configured into WordPress via ‘Application Settings’ option available in the AppService. Note that you can retrieve the database connection details from Application Setting section in case you forgot to note them down during the creation time.&lt;/p&gt;
+
+&lt;p&gt;First, go to the MySQL resource corresponding to your WordPress deployment, and click on ‘Reset Password’ option as shown below. Now enter the new password and click on Save. Wait until the action is completed.&lt;/p&gt;
+
+&lt;p&gt;Then navigate to the Configuration section of your AppService and update the Application Settings corresponding to the database connection details. Once you update the values, click on Save and wait for app to get restarted. The settings are as follows&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DATABASE_HOST&lt;/li&gt;
+  &lt;li&gt;DATABASE_NAME&lt;/li&gt;
+  &lt;li&gt;DATABASE_USERNAME&lt;/li&gt;
+  &lt;li&gt;DATABASE_PASSWORD&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;changing-wordpress-admin-password&quot;&gt;Changing WordPress Admin Password&lt;/h2&gt;
+
+&lt;p&gt;WordPress is installed on the AppService with the admin credentials provided by the user during the create process. These details are also added to the Application Settings of the AppService for initial deployment purpose. You can retrieve the credentials from here in case you forgot to note them during the creation time.&lt;/p&gt;
+
+&lt;p&gt;Note that changing the admin credentials values in Application Settings after the deployment doesn’t update the same in WordPress, meaning that it does not actually changes the credentials. These App Settings only meant for initial deployment purpose and, also to help the users note them down for the first time.&lt;/p&gt;
+
+&lt;p&gt;Actual update of admin credentials must be done via WordPress Admin dashboard. And this process doesn’t update the values back in the Application Settings of the AppService, as those parameters are out of sync once the app is created.&lt;/p&gt;
+
+&lt;p&gt;Go to the admin dashboard of your WordPress site by using the following link format https://&lt;yourapp&gt;.azurewebsites.net/wp-admin. It will prompt you to login. Use the credentials you have entered during the create process to login to the dashboard.&lt;/yourapp&gt;&lt;/p&gt;
+
+&lt;p&gt;Then navigate to Users section as shown below and move your cursor over the user entry you want to make changes to and click Edit option which appears there.&lt;/p&gt;
+
+&lt;p&gt;Set the new password using the option provided there and click on “Update Profile” to save the changes.&lt;/p&gt;
+
+&lt;h2 id=&quot;environment-variables&quot;&gt;Environment variables&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Application Setting&lt;/th&gt;
+      &lt;th&gt;Scope&lt;/th&gt;
+      &lt;th&gt;Value&lt;/th&gt;
+      &lt;th&gt;Max&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WEBSITES_CONTAINER_START_TIME_LIMIT&lt;/td&gt;
+      &lt;td&gt;Web app&lt;/td&gt;
+      &lt;td&gt;900&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;The amount of time the platform will wait (for the site to come up) before it restarts your container. WP installation takes around 5-10 mins after the AppService is deployed. By default, timeout limit for Linux AppService is 240 seconds. So, overriding this value to 900 seconds for WordPress deployments to avoid container restarts during the setup process. This is a required setting, and it is recommended to not change this value.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WEBSITES_ENABLE_APP_SERVICE_STORAGE&lt;/td&gt;
+      &lt;td&gt;Web App&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;When set to TRUE, file contents are preserved during restarts.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WP_MEMORY_LIMIT&lt;/td&gt;
+      &lt;td&gt;WordPress&lt;/td&gt;
+      &lt;td&gt;128M&lt;/td&gt;
+      &lt;td&gt;512M&lt;/td&gt;
+      &lt;td&gt;Frontend or general wordpress PHP memory limit (per script). Can’t be more than PHP_MEMORY_LIMIT&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WP_MAX_MEMORY_LIMIT&lt;/td&gt;
+      &lt;td&gt;WordPress&lt;/td&gt;
+      &lt;td&gt;256M&lt;/td&gt;
+      &lt;td&gt;512M&lt;/td&gt;
+      &lt;td&gt;Admin dashboard PHP memory limit (per script). Generally Admin dashboard/ backend scripts takes lot of memory compared to frontend scripts. Can’t be more than PHP_MEMORY_LIMIT.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PHP_MEMORY_LIMIT&lt;/td&gt;
+      &lt;td&gt;PHP&lt;/td&gt;
+      &lt;td&gt;512M&lt;/td&gt;
+      &lt;td&gt;512M&lt;/td&gt;
+      &lt;td&gt;Memory limits for general PHP script. It can only be decreased.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;FILE_UPLOADS&lt;/td&gt;
+      &lt;td&gt;PHP&lt;/td&gt;
+      &lt;td&gt;On&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Can be either On or Off. Note that values are case sensitive. Enables or disables file uploads.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;UPLOAD_MAX_FILESIZE&lt;/td&gt;
+      &lt;td&gt;PHP&lt;/td&gt;
+      &lt;td&gt;50M&lt;/td&gt;
+      &lt;td&gt;256M	Max file upload size limit. Can be increased up to 256M.&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;POST_MAX_SIZE&lt;/td&gt;
+      &lt;td&gt;PHP&lt;/td&gt;
+      &lt;td&gt;128M&lt;/td&gt;
+      &lt;td&gt;256M&lt;/td&gt;
+      &lt;td&gt;Can be increased up to 256M. Generally should be more than UPLOAD_MAX_FILESIZE.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MAX_EXECUTION_TIME&lt;/td&gt;
+      &lt;td&gt;PHP&lt;/td&gt;
+      &lt;td&gt;120&lt;/td&gt;
+      &lt;td&gt;120&lt;/td&gt;
+      &lt;td&gt;Can only be decreased. Please break down the scripts if it is taking more than 120 seconds. Added to avoid bad scripts from slowing the system.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MAX_INPUT_TIME&lt;/td&gt;
+      &lt;td&gt;PHP&lt;/td&gt;
+      &lt;td&gt;120&lt;/td&gt;
+      &lt;td&gt;120&lt;/td&gt;
+      &lt;td&gt;Max time limit for parsing the input requests. Can only be decreased.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MAX_INPUT_VARS&lt;/td&gt;
+      &lt;td&gt;PHP&lt;/td&gt;
+      &lt;td&gt;10000&lt;/td&gt;
+      &lt;td&gt;10000&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DATABASE_HOST&lt;/td&gt;
+      &lt;td&gt;Database&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Database host used to connect to WordPress.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DATABASE_NAME&lt;/td&gt;
+      &lt;td&gt;Database&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Database name used to connect to WordPress.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DATABASE_USERNAME&lt;/td&gt;
+      &lt;td&gt;Database&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Database username used to connect to WordPress.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DATABASE_PASSWORD&lt;/td&gt;
+      &lt;td&gt;Database&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Database password used to connect to WordPress.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;WordPress installation simple, just provide the desired admin email, username, and password and everything else is taken care of. The latest update also brings significant performance enhancements like integrated caching and image compression.&lt;/p&gt;</content><author><name>Azure App Service</name></author><category term="PHP" /><summary type="html">We are happy to announce the public preview of the WordPress offering on App Service. This offering will enable you to deploy and host new WordPress websites with ease.</summary></entry><entry><title type="html">Planned Maintenance Notifications for Azure App Service</title><link href="https://azure.github.io/AppService/2022/02/01/App-Service-Planned-Notification-Feature.html" rel="alternate" type="text/html" title="Planned Maintenance Notifications for Azure App Service" /><published>2022-02-01T00:00:00+00:00</published><updated>2022-02-01T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/02/01/App%20Service%20Planned%20Notification%20Feature</id><content type="html" xml:base="https://azure.github.io/AppService/2022/02/01/App-Service-Planned-Notification-Feature.html">&lt;p&gt;Azure App Service is regularly updated to provide new features, new runtime versions, performance improvements, and bug fixes. One of the top feature requests from our customers is the ability to receive notifications before one of the platform updates occurs. We are happy to announce that, starting early March 2022, notifications for scheduled maintenance on Azure App Service will be available for App Service Environments V3 (ASEv3) and multi-tenant applications.&lt;/p&gt;
+
+&lt;p&gt;With these notifications, you will be able to receive email or SMS text alerts before a platform upgrade starts, while it is in progress, and when the upgrade completes. For multi-tenant applications, we have also included a more advanced 7-day notification option allowing for more time to prepare for an upgrade. This 7-day notification will alert customers to an upcoming platform upgrade approximately 1 week before the event begins. You can also invoke Azure Functions or Logic Apps based on these notifications. This 7-day addition has been rolled out for multi-tenant environments across our regions with App Service Environments V3 coming soon. This article shows how to set up email and SMS alerts, as well as Function and Logic Apps, to consume these events. For critical security or livesite updates, we may not be able to send notifications as these updates are time sensitive.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;The maintenance notifications for App Service are surfaced as events in Azure Monitor. This means that you can set up your email address and/or SMS phone number when a notification is generated. You can also set up a trigger for your custom Azure Function or Logic App, which allows you to automatically take action to your resources. For example, you can automatically divert all the traffic from your App Service Environment in one region which will be upgraded to an App Service Environment in another region in order to avoid any potential impact. Then, you can automatically change the traffic back to normal when an upgrade completes. Please refer to the &lt;a href=&quot;https://github.com/Azure-Samples/azure-logic-app-traffic-update-samples&quot;&gt;Logic App sample for automatic traffic diversion for Azure App Service&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;h2 id=&quot;viewing-upgrade-notifications&quot;&gt;Viewing upgrade notifications&lt;/h2&gt;
+
+&lt;p&gt;From the Azure portal, go to &lt;strong&gt;Home&lt;/strong&gt; &amp;gt; &lt;strong&gt;Monitor&lt;/strong&gt; &amp;gt; &lt;strong&gt;Service Health&lt;/strong&gt; &amp;gt; &lt;strong&gt;Planned maintenance&lt;/strong&gt;. Here you can see all active (including upcoming or in-progress) notifications for the selected subscriptions. To make it easy to find App Service upgrade events, click the &lt;strong&gt;Service&lt;/strong&gt; box, check all App Service types and uncheck everything else. To see past notifications, navigate to &lt;strong&gt;Health history&lt;/strong&gt; and filter &lt;strong&gt;Planned maintenance&lt;/strong&gt; from the Health Event Type box.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/AppService/media/2022/02/upgradenotification.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-alerts&quot;&gt;Setting up alerts&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open &lt;strong&gt;Azure portal&lt;/strong&gt;, sign in with your credentials.&lt;/li&gt;
+  &lt;li&gt;Search for the icon named &lt;strong&gt;Monitor&lt;/strong&gt; and click it. If you cannot see it, click the arrow on the right to show &lt;strong&gt;All services&lt;/strong&gt;, then search Monitor.&lt;/li&gt;
+  &lt;li&gt;In the left menu items, click &lt;strong&gt;Alerts&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Service Health&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Add service health alert&lt;/strong&gt; at the top center.&lt;/li&gt;
+  &lt;li&gt;In the Condition section, choose the subscription that owns your App Service Environment(s).&lt;/li&gt;
+  &lt;li&gt;At the Service(s) box, choose all items starting with App Service:
+    &lt;ol&gt;
+      &lt;li&gt;App Service&lt;/li&gt;
+      &lt;li&gt;App Service \ Web Apps&lt;/li&gt;
+      &lt;li&gt;App Service (Linux)&lt;/li&gt;
+      &lt;li&gt;App Service (Linux) \ Web App for Containers&lt;/li&gt;
+      &lt;li&gt;App Service (Linux) \ Web App&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;At the Region(s) box, make sure to check the regions of the App Service Environment(s).&lt;/li&gt;
+  &lt;li&gt;At the Event type box, check &lt;strong&gt;Planned maintenance&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;In the Actions section, click &lt;strong&gt;Add action groups&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Create alert rule&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Select a subscription that your App Service Environment belongs to.&lt;/li&gt;
+  &lt;li&gt;Choose a resource group and name an action group. Set Display name to something you can easily identify the action for (&lt;strong&gt;IMPORTANT&lt;/strong&gt;: The display name will be shown in every email/SMS/post of the notifications).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;If you want to receive text notifications&lt;/em&gt;, in the Notifications section, choose &lt;strong&gt;Email/SMS message/Push/Voice&lt;/strong&gt; at the Notification type. Then choose output channels you need (For example, Email or SMS.) Put email addresses or phone numbers as necessary.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;If you want to hook up your custom automation&lt;/em&gt;, in the Actions section, choose &lt;strong&gt;Azure Function&lt;/strong&gt; or &lt;strong&gt;Logic App&lt;/strong&gt; at the Action type. Put a name into the Name. Select your app.&lt;/li&gt;
+  &lt;li&gt;Press &lt;strong&gt;Save changes&lt;/strong&gt;. The page will go back to the Rules management page.&lt;/li&gt;
+  &lt;li&gt;In the Alert rule details section, set a name.&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;more-resources&quot;&gt;More resources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure/azure-monitor/&quot;&gt;Azure Monitor documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-common-schema-definitions&quot;&gt;Common alert schema definitions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Azure-Samples/azure-logic-app-traffic-update-samples&quot;&gt;Logic App sample for automatic traffic diversion for Azure App Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;faq&quot;&gt;FAQ&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;When do you send the upgrade notifications?&lt;/strong&gt;&lt;br /&gt;
+The first notifications will be created about 7 days before an actual upgrade operation starts. A notification is then sent 60-90 minutes before maintenance starts and then again once upgrades are underway.&lt;/p&gt;
+
+&lt;p&gt;Once the upgrade starts, we send in-progress notifications every 12 hours until the operation completes. After it has finished, we send a notification of completion.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Will the upgrade happen in exactly 7 days?&lt;/strong&gt;&lt;br /&gt;
+The exact timing of the maintenance may vary depending on several factors, but will not be before 7 days. You will still receive a notification shortly before maintenance begins.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;When will 7-day notifications be available for ASE?&lt;/strong&gt;&lt;br /&gt;
+ASEv3 customers will have the option to opt in to 7-day notifications, in addition to the current notifications, in Q2 2022.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Does this notification apply to all Azure services?&lt;/strong&gt;&lt;br /&gt;
+No, this notification covers only planned App Service upgrades. Networking, Compute, or Storage upgrades that may cause worker movement are not within the scope of these notifications.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Can I invoke my Azure Function when a notification comes?&lt;/strong&gt;&lt;br /&gt;
+Yes, you can set up action to trigger your Azure Function or Logic App. It is recommended to not trigger automation based on the 7-day notiifcation as exact times may vary. The 7 day notification is for awareness and using the follow on notifications of before, during, and after completion will be more precise. Please see &lt;a href=&quot;https://github.com/Azure-Samples/azure-logic-app-traffic-update-samples&quot;&gt;Logic App sample for automatic traffic diversion for Azure App Service&lt;/a&gt; as an example.&lt;/p&gt;
+
+&lt;p&gt;To see the data format of the notifications, refer to &lt;a href=&quot;https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-common-schema-definitions&quot;&gt;Common alert schema definitions&lt;/a&gt;.&lt;/p&gt;</content><author><name>Azure App Service</name></author><category term="diagnostics" /><summary type="html">Azure App Service is regularly updated to provide new features, new runtime versions, performance improvements, and bug fixes. One of the top feature requests from our customers is the ability to receive notifications before one of the platform updates occurs. We are happy to announce that, starting early March 2022, notifications for scheduled maintenance on Azure App Service will be available for App Service Environments V3 (ASEv3) and multi-tenant applications.</summary></entry><entry><title type="html">App Service Environment v3 Migration Feature Public Preview</title><link href="https://azure.github.io/AppService/2022/01/18/ASE-migration-feature-public-preview.html" rel="alternate" type="text/html" title="App Service Environment v3 Migration Feature Public Preview" /><published>2022-01-18T00:00:00+00:00</published><updated>2022-01-18T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2022/01/18/ASE-migration-feature-public-preview</id><content type="html" xml:base="https://azure.github.io/AppService/2022/01/18/ASE-migration-feature-public-preview.html">&lt;p&gt;We are happy to announce the availability of the public preview of the &lt;a href=&quot;https://aka.ms/asemigration&quot;&gt;App Service Environment (ASE) v3 migration feature&lt;/a&gt;. With this feature, you’ll be able to migrate your existing ASE as well as the apps running on that ASE to &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/environment/overview&quot;&gt;ASEv3&lt;/a&gt;. ASEv3 provides a number of &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/environment/overview#feature-differences&quot;&gt;feature differences&lt;/a&gt; as well as performance enhancements and &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/environment/overview#pricing&quot;&gt;potential reduced overall costs&lt;/a&gt; compared to previous versions. To get a complete overview on ASEv3, read the ASEv3 focused &lt;a href=&quot;https://docs.microsoft.com/azure/app-service/environment/overview&quot;&gt;App Service Environment overview&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Check out the following docs to learn more about migrating to ASEv3:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aka.ms/asemigration&quot;&gt;Migrate to App Service Environment v3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aka.ms/asemigrationhowto&quot;&gt;How to Migrate to ASEv3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br /&gt;
+At this time, the public preview supports a subset of possible ASE configurations. Be sure to review the supported scenarios to see if you can migrate at this time using the feature and stay tuned for updates as we release additional capabilities.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;An Azure portal experience for migration will be available at the start of February, 2022. Be on the lookout for additional announcements.&lt;/p&gt;
+
+&lt;p&gt;If your ASE &lt;a href=&quot;https://aka.ms/asemigration#preview-limitations&quot;&gt;isn’t supported for migration&lt;/a&gt; using the migration feature and your ASE isn’t listed under one of the &lt;a href=&quot;https://aka.ms/asemigration#preview-limitations&quot;&gt;upcoming supported scenarios&lt;/a&gt;, you have the option to migrate to ASEv3 manually. See the &lt;a href=&quot;https://aka.ms/asemigrationalternatives&quot;&gt;migration alternatives&lt;/a&gt; for more details.&lt;/p&gt;</content><author><name>Azure App Service</name></author><category term="networking" /><summary type="html">We are happy to announce the availability of the public preview of the App Service Environment (ASE) v3 migration feature. With this feature, you’ll be able to migrate your existing ASE as well as the apps running on that ASE to ASEv3. ASEv3 provides a number of feature differences as well as performance enhancements and potential reduced overall costs compared to previous versions. To get a complete overview on ASEv3, read the ASEv3 focused App Service Environment overview.</summary></entry><entry><title type="html">Azure App Service and Azure Functions on Azure Stack Hub 2021 Q3 Released</title><link href="https://azure.github.io/AppService/2021/12/10/App-Service-on-Azure-Stack-Hub-2021-Q3-Update-Released.html" rel="alternate" type="text/html" title="Azure App Service and Azure Functions on Azure Stack Hub 2021 Q3 Released" /><published>2021-12-10T00:00:00+00:00</published><updated>2021-12-10T00:00:00+00:00</updated><id>https://azure.github.io/AppService/2021/12/10/App%20Service%20on%20Azure%20Stack%20Hub%202021%20Q3%20Update%20Released</id><content type="html" xml:base="https://azure.github.io/AppService/2021/12/10/App-Service-on-Azure-Stack-Hub-2021-Q3-Update-Released.html">&lt;p&gt;The 2021 Q3 update to Azure App Service on Azure Stack Hub is now available. This release updates the resource provider and brings the following key capabilities and fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Updates to &lt;strong&gt;App Service Tenant, Admin, Functions portals and Kudu tools&lt;/strong&gt;. Consistent with Azure Stack Portal SDK version.&lt;/li&gt;
+  &lt;li&gt;Updates to core service to improve reliability and error messaging enabling easier diagnosis of common issues.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Updates to the following application frameworks and tools&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;ASP.NET Core
+        &lt;ul&gt;
+          &lt;li&gt;3.1.16&lt;/li&gt;
+          &lt;li&gt;5.0.7&lt;/li&gt;
+          &lt;li&gt;6.0.0&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Azul OpenJDK
+        &lt;ul&gt;
+          &lt;li&gt;8.52.0.23&lt;/li&gt;
+          &lt;li&gt;11.44.13&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Git 2.33.1.1&lt;/li&gt;
+      &lt;li&gt;NodeJS
+        &lt;ul&gt;
+          &lt;li&gt;10.15.2&lt;/li&gt;
+          &lt;li&gt;10.16.3&lt;/li&gt;
+          &lt;li&gt;10.19.0&lt;/li&gt;
+          &lt;li&gt;12.21.0&lt;/li&gt;
+          &lt;li&gt;14.15.1&lt;/li&gt;
+          &lt;li&gt;14.16.0&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;NPM
+        &lt;ul&gt;
+          &lt;li&gt;6.14.11&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;PHP
+        &lt;ul&gt;
+          &lt;li&gt;7.2.34&lt;/li&gt;
+          &lt;li&gt;7.3.27&lt;/li&gt;
+          &lt;li&gt;7.14.15&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Tomcat
+        &lt;ul&gt;
+          &lt;li&gt;8.5.58&lt;/li&gt;
+          &lt;li&gt;9.0.38&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Updated Kudu to 94.30524.5227&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Updates to underlying operating system of all roles&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://support.microsoft.com/help/5007192&quot;&gt;2021-11 Cumulative Update for Windows Server 2016 for x64-based Systems (KB5007192)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://support.microsoft.com/help/5005698&quot;&gt;2021-09 Servicing Stack Update for Windows Server 2016 for x64-based Systems (KB5005698)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Defender Definition 1.353.743.0&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Cumulative Updates for Windows Server are now applied to Controller roles as part of deployment and upgrade&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;All other fixes and updates are detailed in the &lt;a href=&quot;https://docs.microsoft.com/azure-stack/operator/app-service-release-notes-2021-q3?view=azs-2108&quot;&gt;App Service on Azure Stack Hub 2021 Q3 Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The App Service on Azure Stack Hub 2021.Q3 build number is &lt;strong&gt;95.1.1.539&lt;/strong&gt; and requires Azure Stack Hub to be updated with 2108 prior to deployment/upgrade.&lt;/p&gt;
+
+&lt;p&gt;Please review the &lt;a href=&quot;https://docs.microsoft.com/azure-stack/operator/app-service-release-notes-2021-Q3&quot;&gt;&lt;strong&gt;release notes and all known issues&lt;/strong&gt;&lt;/a&gt; prior to updating your installation of Azure App Service on Azure Stack Hub.&lt;/p&gt;
+
+&lt;p&gt;You can download the new installer and helper scripts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aka.ms/appsvcupdate21q3installer&quot;&gt;Installer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aka.ms/appsvconmashelpers&quot;&gt;Helper Scripts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please read the updated documentation prior to getting started with deployment:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure-stack/operator/app-service-release-notes-2021-Q3&quot;&gt;2021 Q3 Update Release Notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure-stack/operator/azure-stack-app-service-before-you-get-started&quot;&gt;Prerequisites for deploying App Service on Azure Stack Hub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure-stack/operator/azure-stack-app-service-deploy&quot;&gt;Deploy the App Service Resource Provider&lt;/a&gt; for new deployments&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/azure-stack/operator/azure-stack-app-service-update&quot;&gt;Update the App Service Resource Provider&lt;/a&gt; for updating existing deployments&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Azure App Service</name></author><category term="Azure Stack" /><summary type="html">The 2021 Q3 update to Azure App Service on Azure Stack Hub is now available. This release updates the resource provider and brings the following key capabilities and fixes: Updates to App Service Tenant, Admin, Functions portals and Kudu tools. Consistent with Azure Stack Portal SDK version. Updates to core service to improve reliability and error messaging enabling easier diagnosis of common issues. Updates to the following application frameworks and tools: ASP.NET Core 3.1.16 5.0.7 6.0.0 Azul OpenJDK 8.52.0.23 11.44.13 Git 2.33.1.1 NodeJS 10.15.2 10.16.3 10.19.0 12.21.0 14.15.1 14.16.0 NPM 6.14.11 PHP 7.2.34 7.3.27 7.14.15 Tomcat 8.5.58 9.0.38 Updated Kudu to 94.30524.5227 Updates to underlying operating system of all roles: 2021-11 Cumulative Update for Windows Server 2016 for x64-based Systems (KB5007192) 2021-09 Servicing Stack Update for Windows Server 2016 for x64-based Systems (KB5005698) Defender Definition 1.353.743.0 Cumulative Updates for Windows Server are now applied to Controller roles as part of deployment and upgrade All other fixes and updates are detailed in the App Service on Azure Stack Hub 2021 Q3 Release Notes The App Service on Azure Stack Hub 2021.Q3 build number is 95.1.1.539 and requires Azure Stack Hub to be updated with 2108 prior to deployment/upgrade. Please review the release notes and all known issues prior to updating your installation of Azure App Service on Azure Stack Hub. You can download the new installer and helper scripts: Installer Helper Scripts Please read the updated documentation prior to getting started with deployment: 2021 Q3 Update Release Notes Prerequisites for deploying App Service on Azure Stack Hub Deploy the App Service Resource Provider for new deployments Update the App Service Resource Provider for updating existing deployments</summary></entry></feed>
